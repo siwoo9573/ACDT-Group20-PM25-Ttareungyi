@@ -35,7 +35,7 @@ Han River classification uses straight-line distance to OSM water polygons in EP
 - Sample: 727 days = 731 days − 3 days with missing wind (2024-03-11, 03-12, 03-14) − 2025-02-28 (truncated source file).
 - Han River station: straight-line distance to the water boundary ≤ 500 m (159 stations) or ≤ 1 km (405).
 - Round trip: rental station = return station; same-station returns of ≤ 2 minutes and missing stations excluded.
-- DML: partially linear model, random forest / gradient boosting, 5-fold cross-fitting, median of 5 seeds, Newey-West standard errors.
+- DML: partially linear model, random forest / gradient boosting, 5-fold cross-fitting, median of 5 seeds, cross-fitted standard errors (Newey–West only for regressions).
 
 ## How to reproduce
 1. `pip install pandas numpy scipy scikit-learn openpyxl`
